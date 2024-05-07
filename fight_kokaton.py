@@ -159,7 +159,7 @@ def main():
             return
         if beam is not None:
             if beam.rct.colliderect(bomb.rct):
-                bird.change_img(8, screen)
+                bird.change_img(6, screen)
                 pg.display.update()
                 time.sleep(1)
                 return
@@ -167,6 +167,8 @@ def main():
             if beam.rct.colliderect(bomb.rct):
                 beam = None
                 bomb = None
+                bird.change_img(6, screen)
+                pg.display.update()
 
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
